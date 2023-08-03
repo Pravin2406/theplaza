@@ -1,0 +1,40 @@
+<header class="header-section">
+  <div class="container-fluid main-menu">
+    <div class="text-right">
+      {{#if currentuser}}
+        {{!-- <span>Welcome, {{currentuser}}</span> --}}
+        <p style="color:rgb(255, 255, 255);">Welcome, {{currentuser}}</p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="container-fluid">
+    <!-- logo -->
+    <div class="site-logo">
+      <img src="img/logo.png" alt="logo" />
+    </div>
+    <!-- responsive -->
+    <div class="nav-switch">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="header-right">
+      {{#if currentuser}}
+      <a href="cart" class="card-bag"><img
+          src="img/icons/bag.png"
+          alt=""/><span>{{totalcartitem}}</span></a>
+      {{/if}}
+    </div>
+
+    <!-- site menu -->
+    <ul class="main-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Category</a></li>
+      <li><a href="/">Shop</a></li>
+      {{#if currentuser}}
+        <li><a href="logout">Logout</a></li>
+      {{else}}
+        <li><a href="login">Login</a></li>
+        <li><a href="registration">Registration</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</header>
